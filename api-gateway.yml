@@ -12,8 +12,12 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: inventory-service
+        - id: inventory-ping
           uri: lb://inventory-service
+          predicates:
+              - Path=/inventory/ping
+        - id: inventory-service
+          uri: lb://INVENTORY-SERVICE
           predicates:
             - Path=/inventory/**
 
