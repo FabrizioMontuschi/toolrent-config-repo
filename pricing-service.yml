@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: pricing-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/pricing_db
+    username: pricing_user
+    password: pricing_pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 0

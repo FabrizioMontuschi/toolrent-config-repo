@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: kardex-service
+
+  datasource:
+    url: jdbc:postgresql://localhost:5432/kardex_db
+    username: kardex_user
+    password: kardex_pass
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+
+server:
+  port: 0
